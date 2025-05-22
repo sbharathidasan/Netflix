@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.*;
 public class Controller {
     @Autowired
     private ServiceClass service;
+    private String name;
     @GetMapping("/movie")
-    public Movie display(@RequestBody String name){
+    public Movie display(@RequestParam String name){
         return service.returnMovieDetail(name);
     }
 }

@@ -21,15 +21,15 @@ public class ServiceClass {
     private Movie movie;
 
     public Movie returnMovieDetail(String name){
-        System.out.println(name);
-//        try {
-//            getImdbRequest(name);
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
-//        movie.setName(name);
+
+        try {
+            getImdbRequest(name);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        movie.setName(name);
         return movie;
     }
     private void getImdbRequest(String name) throws IOException, InterruptedException {
