@@ -32,9 +32,3 @@ public class ServiceClass {
 
 
 }
-//public Movie fetchMovieFromOMDb(String title) {
-//    String url = "https://www.omdbapi.com/?t=" + title + "&apikey=" + apiKey;
-//    RestTemplate restTemplate = new RestTemplate();
-//    Movie movie = restTemplate.getForObject(url, Movie.class);
-//    return movie;
-//}
