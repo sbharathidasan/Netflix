@@ -26,7 +26,9 @@ public class ServiceClass {
         System.out.println(link);
         RestTemplate restTemplate=new RestTemplate();
         movie =restTemplate.getForObject(link,Movie.class);
-        System.out.println(movie);
+        if (movie!=null) {
+            movie.setLink("https://vidsrc.xyz/embed/movie?imdb=" + movie.getImdbID());
+        }
         return movie;
     }
 

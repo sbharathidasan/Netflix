@@ -16,4 +16,5 @@ public class Controller {
     public Movie display(@RequestParam String name){
         return service.returnMovieDetail(name);
     }
+
 }
